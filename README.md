@@ -8,6 +8,9 @@ Material UI,
 Firebase (Hosting front-end - Authentication),
 Firebase firestore (real-time Database),
 
+##check it...
+GoLive[https://telegram-clone-redux.firebaseapp.com/]
+
 ## Installation
 
 Use the package manager [npm] to install Telegram-clone all dependencies.
