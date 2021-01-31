@@ -1,15 +1,27 @@
 
 # Telegram-Clone (social media Apps)
 
+
+# How it's looking on live?
+
+[Golive](https://telegram-clone-redux.firebaseapp.com/)
+
+
+# Note:
+
+I used Heroku to host my back-end and Firebase to host front-end.
+Uploaded files separated.
+
+
+# Technology Used:
+
 React,
 Redux,
 react-router-dom,
 Material UI,
 Firebase (Hosting front-end - Authentication),
-Firebase firestore (real-time Database),
+Firebase firestore (real-time Database)
 
-##check it...
-GoLive[https://telegram-clone-redux.firebaseapp.com/]
 
 ## Installation
 
