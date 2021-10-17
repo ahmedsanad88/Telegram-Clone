@@ -1,5 +1,5 @@
 
-# Telegram-Clone (social media Apps)
+# Telegram-Clone (social media Apps):
 
 It's the clone for telegram social media app which introduces the main functionality for chat apps like real-time chat & login and registration by using firebase authentication to make it easy for use.
 Merging between React & Redux as a state management system and firebase to make that happen.
