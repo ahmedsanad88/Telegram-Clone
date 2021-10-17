@@ -51,15 +51,18 @@ const Thread = () => {
         var time = today.getHours() + ":" + today.getMinutes();
         var dateTime = date+' '+time;
 
-        
-           input && db.collection('threads').doc(threadId).collection('messages').add({
-                timestamp: dateTime,
-                message: input,
-                uid: user.uid,
-                photo: user.photo,
-                email: user.email,
-                displayName: user.displayName,
-            });
+        if (threadId) {
+            input && db.collection('threads').doc(threadId).collection('messages').add({
+                 timestamp: dateTime,
+                 message: input,
+                 uid: user.uid,
+                 photo: user.photo,
+                 email: user.email,
+                 displayName: user.displayName,
+             });
+        }else {
+            alert("Please select first any thread or add one to interact with it.");
+        }
         
         return (
         setInput('')
@@ -72,6 +75,13 @@ const Thread = () => {
         useEffect(() => {
             setSeed(Math.floor(Math.random() * 5000));
         }, []);
+
+    /* 
+    need to order the data came form database as I stored normal date string inside timestamp so i can not sort it as normal string so, after fetching data I update it by using simple sort method to update the messages list to sorted messages to be shown on the page.
+    */  
+    const sortedMessages = messages.sort((a,b) => new Date(b.data.timestamp).getTime() - new Date(a.data.timestamp).getTime());
+
+    // console.log("Hiiii",sortedMessages);
 
     return (
         <div className="thread">
@@ -93,7 +103,7 @@ const Thread = () => {
                 </IconButton>
             </div>
             <div className="thread__messages">
-                {messages.map(({id, data}) => (
+                {sortedMessages.map(({id, data}) => (
                     <Message key={id} data={data} />
                 ))}
             </div>

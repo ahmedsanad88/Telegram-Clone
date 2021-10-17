@@ -25,7 +25,3 @@ const Message = ( id, data )=> {
 }
 
 export default Message;
-
-// {new Date(timestamp?.toDate())}
-
-// new Date(timestamp?.toDate()).toLocaleDateString()

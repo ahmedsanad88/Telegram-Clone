@@ -36,11 +36,34 @@
 #sidebar__button {
     color: white !important;
     margin-left: 5px;
+    position: relative;
 }
 
 #sidebar__button:hover {
     color: rgba(2, 150, 199, 0.5) !important;
     background-color: #1b2b46;
+}
+
+#sidebar__button:hover::before {
+    content: attr(data-text);
+    position: absolute;
+    left: -70px;
+    bottom: -5px;
+    color: white;
+    font-size: 10px;
+    background-color: black;
+    padding: 5px;
+    border-radius: 2px;
+    animation: scaleIt 0.2s 1 linear;
+}
+
+@keyframes scaleIt {
+    from {
+        transform: scale(0);
+    }
+    to {
+        transform: scale(1);
+    }
 }
 
 .sidebar__threads {
@@ -72,3 +95,20 @@
     color: rgba(2, 150, 199,0.5);
     background-color: #1b2b46;
 }
+
+#exit {
+    position: relative;
+}
+
+#exit:hover::before {
+    content: attr(data-text);
+    position: absolute;
+    left: -10px;
+    top: -15px;
+    color: white;
+    font-size: 10px;
+    background-color: black;
+    padding: 5px;
+    border-radius: 2px;
+    animation: scaleIt 0.2s 1 linear;
+} 

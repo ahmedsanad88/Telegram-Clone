@@ -14,14 +14,17 @@ const SidebarThread = ({id, threadName, threadDes}) => {
 
     const [threadInfo, setThreadInfo] = useState([]);
 
+    // const revertToDate = (string) => {
+    //     return Date(string);
+    // };
     // console.log(threadInfo);
-
+    
     useEffect(() => {
         if (threadId)
         db.collection('threads').doc(threadId).collection('messages').orderBy('timestamp', 'desc').onSnapshot((snapshot) => setThreadInfo(snapshot.docs.map((doc) => doc.data()))
         );
         
-        return (console.log('hello World'));
+        return (console.log('Messages are successfully here.'));
     }, [threadId]);
 
     const [seed, setSeed] = useState('');

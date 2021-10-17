@@ -50,7 +50,7 @@ const Sidebar = () => {
                     <SearchIcon className="sidebar__searchIcon"/>
                     <input placeholder="search" className="sidebar__input"></input>
                 </div>
-                <IconButton variant="outlined" id="sidebar__button">
+                <IconButton variant="outlined" id="sidebar__button" data-text="ADD THREAD">
                     <BorderColorIcon className="sidebar__BorderColorIcon" onClick={addThread} />
                 </IconButton>
             </div>
@@ -70,7 +70,7 @@ const Sidebar = () => {
                 <IconButton>
                     <SettingsIcon />
                 </IconButton>
-                <IconButton>
+                <IconButton id="exit" data-text="Sign Out">
                     <ExitToAppIcon onClick={() => auth.signOut()} />
                 </IconButton>
             </div>

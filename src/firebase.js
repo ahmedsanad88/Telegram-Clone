@@ -2,9 +2,12 @@ import firebase from "firebase";
 
 
 const firebaseConfig = {
-
-  // Your Config Key from firebase project.
-
+  apiKey: process.env.REACT_APP_API_KEY,
+  authDomain: "telegram-clone-redux.firebaseapp.com",
+  projectId: "telegram-clone-redux",
+  storageBucket: "telegram-clone-redux.appspot.com",
+  messagingSenderId: process.env.REACT_APP_MESSAGE_ID,
+  appId: process.env.REACT_APP_APP_ID
 };
 
 const firebaseApp = firebase.initializeApp(firebaseConfig);
